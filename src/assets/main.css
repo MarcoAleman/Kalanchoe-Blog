@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Titan One', san-serif;
+}
+
+:root {
+  --color1: #213435;
+  --color2: #46685b;
+  --color3: #648a64;
+  --color4: #648a64;
+  --color5: #e1e3ac;
+}
+
+
+body {
+  background-color: var(--color5);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  margin-top: 7vh;
+}
+
+section.ctn,
+form.ctn {
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: var(--color3);
+  width: 90%;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 5px black;
+}
+
+/*------------------------FORMS---------------------------*/
+form .input-ctn {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-ctn input,
+.input-ctn textarea {
+  text-align: center;
+  width: 90%;
+  height: 45px;
+  font-size: 15px;
+  color: #555;
+  background-color: var(--color5);
+  line-height: 1.2;
+  outline: none;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 2px solid gray;
+}
+
+.input-ctn textarea {
+  height: 90px;
+  padding-top: 15px;
+}
+
+.btn-form {
+  width: 80%;
+  background-color: var(--color2);
+  color: white;
+  align-self: center;
+}
+
+.btn-form:hover {
+  background-color: var(--color1);
+  color: white;
+  box-shadow: white 0 0 5px;
+}

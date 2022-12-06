@@ -1,0 +1,83 @@
+<script setup>
+import { RouterLink } from 'vue-router'
+</script>
+<template>
+    <header class="d-flex justify-content-between align-items-center p-2 fixed-top">
+        <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <span><img src="../assets/img/menu.svg"/></span>
+        </a>
+
+        <div><img src="../assets/img/logo1.svg" alt="" srcset="" /> Kalanchoe</div>
+        <img src="../assets/img/user.svg" alt="" srcset="" />
+
+        <div class="offcanvas offcanvas-start text-center" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" data-bs-toggle="offcanvas">
+                <div>
+                    <ul>
+                        <li>
+                            <RouterLink to="/" class="dropdown-item text-center">Home</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/" class="dropdown-item">Posts Recientes</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/" class="dropdown-item">Posts Populares</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/about" class="dropdown-item">About Us</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/contact" class="dropdown-item">Contact Us</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/work" class="dropdown-item">Work with Us</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/profile" class="dropdown-item">Mi perfil</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/fav" class="dropdown-item">Mis favoritos</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/terms" class="dropdown-item">Terminos y condiciones</RouterLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+</template>
+
+<style scoped>
+header {
+    height: 7vh;
+    background-color: var(--color1);
+    color: white;
+}
+
+header span {
+    color: white;
+}
+
+header div {
+    font-size: 1.5rem;
+}
+
+header img {
+    width: 25px;
+}
+
+.offcanvas {
+    background-color: var(--color4);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+</style>
