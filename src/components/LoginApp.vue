@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <section class="ctn about text-center mt-5 py-3">
+    <section class="ctn about text-center mt-5 mb-3 py-3">
         <form action="#">
             <h2>Login</h2>
             <div class="login-redes d-flex justify-content-evenly align-itmes-center my-4">

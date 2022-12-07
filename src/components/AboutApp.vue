@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <section class="ctn about mt-5 p-2 text-center">
+    <section class="ctn about mt-5 mb-3 p-2 text-center">
         <h3>About Us!</h3>
         <div class="profile img mb-2">
             <img src="../assets/img/user.svg" alt="" srcset="">

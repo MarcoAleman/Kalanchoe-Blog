@@ -10,7 +10,7 @@
             <h1>Kalanchoe</h1>
         </div>
     </div> -->
-    <form action="#" class="profile ctn mt-5 p-2 text-center">
+    <form action="#" class="profile ctn mt-5 mb-3 p-2 text-center">
         <div class="img-profile">
             <img src="../assets/img/user.svg" alt="" srcset="">
         </div>

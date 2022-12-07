@@ -31,7 +31,7 @@
         <div class="divisor">
             <div class="count-comments">3 comments</div>
         </div>
-        <div class="comment d-flex row m-0">
+        <div v-for="comment in 3" class="comment d-flex row m-0">
             <div class="post-image d-flex align-items-center justify-content-center w-25">
                 <img src="../assets/img/user.svg" alt="" srcset="" style="height: 50px;">
             </div>
@@ -54,7 +54,7 @@
 .img-post {}
 
 .img-post img {
-    width: 100%;
+    width: 90%;
 }
 
 .post p {

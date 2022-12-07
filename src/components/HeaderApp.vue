@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 </script>
+
 <template>
     <header class="d-flex justify-content-between align-items-center p-2 fixed-top shadow-s">
         <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
@@ -8,7 +9,7 @@ import { RouterLink } from 'vue-router'
         </a>
 
         <RouterLink to="/"><img class="loguito" src="../assets/img/loguito.png" alt="Kalanchoe Kingdom"/></RouterLink>
-        <RouterLink to="/profile">
+        <RouterLink to="/login">
             <img src="../assets/img/user.svg"/>
         </RouterLink>
 
@@ -25,10 +26,10 @@ import { RouterLink } from 'vue-router'
                             <RouterLink to="/" class="dropdown-item text-center">Home</RouterLink>
                         </li>
                         <li data-bs-dismiss="offcanvas">
-                            <RouterLink to="/post" class="dropdown-item">Posts Recientes</RouterLink>
+                            <RouterLink to="/new" class="dropdown-item">New Posts</RouterLink>
                         </li>
                         <li data-bs-dismiss="offcanvas">
-                            <RouterLink to="/" class="dropdown-item">Posts Populares</RouterLink>
+                            <RouterLink to="/post" class="dropdown-item">Posts Populares</RouterLink>
                         </li>
                         <li data-bs-dismiss="offcanvas">
                             <RouterLink to="/about" class="dropdown-item">About Us</RouterLink>
@@ -42,7 +43,7 @@ import { RouterLink } from 'vue-router'
                         <li data-bs-dismiss="offcanvas">
                             <RouterLink to="/profile" class="dropdown-item">Mi perfil</RouterLink>
                         </li>
-                        <li data-bs-dismiss="offcanvas">
+                        <li class="d-none" data-bs-dismiss="offcanvas">
                             <RouterLink to="/fav" class="dropdown-item">Mis favoritos</RouterLink>
                         </li>
                         <li data-bs-dismiss="offcanvas">

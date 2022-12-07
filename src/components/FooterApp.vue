@@ -2,7 +2,7 @@
 import { RouterLink } from 'vue-router'
 </script>
 <template>
-    <footer class="mt-2 p-2">
+    <footer class="p-2">
         <div class="redes text-center">
             <h3>Follow Us!!!</h3>
             <div class="icons d-flex justify-content-evenly pt-2">

@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <form action="#" class="ctn contact mt-5 p-2 py-3 d-flex flex-column text-center">
+    <form action="#" class="ctn contact mt-5 mb-3 p-2 py-3 d-flex flex-column text-center">
         <h2>Work with Us!</h2>
         <div class="input-ctn" data-validate="email is required">
             <label for="email">Email</label>
