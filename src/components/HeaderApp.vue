@@ -2,13 +2,15 @@
 import { RouterLink } from 'vue-router'
 </script>
 <template>
-    <header class="d-flex justify-content-between align-items-center p-2 fixed-top">
+    <header class="d-flex justify-content-between align-items-center p-2 fixed-top shadow-s">
         <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
             <span><img src="../assets/img/menu.svg"/></span>
         </a>
 
-        <div><img src="../assets/img/logo1.svg" alt="" srcset="" /> Kalanchoe</div>
-        <img src="../assets/img/user.svg" alt="" srcset="" />
+        <RouterLink to="/"><img class="loguito" src="../assets/img/loguito.png" alt="Kalanchoe Kingdom"/></RouterLink>
+        <RouterLink to="/profile">
+            <img src="../assets/img/user.svg"/>
+        </RouterLink>
 
         <div class="offcanvas offcanvas-start text-center" tabindex="-1" id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel">
@@ -16,34 +18,34 @@ import { RouterLink } from 'vue-router'
                 <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body" data-bs-toggle="offcanvas">
+            <div class="offcanvas-body">
                 <div>
                     <ul>
-                        <li>
+                        <li data-bs-dismiss="offcanvas">
                             <RouterLink to="/" class="dropdown-item text-center">Home</RouterLink>
                         </li>
-                        <li>
-                            <RouterLink to="/" class="dropdown-item">Posts Recientes</RouterLink>
+                        <li data-bs-dismiss="offcanvas">
+                            <RouterLink to="/post" class="dropdown-item">Posts Recientes</RouterLink>
                         </li>
-                        <li>
+                        <li data-bs-dismiss="offcanvas">
                             <RouterLink to="/" class="dropdown-item">Posts Populares</RouterLink>
                         </li>
-                        <li>
+                        <li data-bs-dismiss="offcanvas">
                             <RouterLink to="/about" class="dropdown-item">About Us</RouterLink>
                         </li>
-                        <li>
+                        <li data-bs-dismiss="offcanvas">
                             <RouterLink to="/contact" class="dropdown-item">Contact Us</RouterLink>
                         </li>
-                        <li>
+                        <li data-bs-dismiss="offcanvas">
                             <RouterLink to="/work" class="dropdown-item">Work with Us</RouterLink>
                         </li>
-                        <li>
+                        <li data-bs-dismiss="offcanvas">
                             <RouterLink to="/profile" class="dropdown-item">Mi perfil</RouterLink>
                         </li>
-                        <li>
+                        <li data-bs-dismiss="offcanvas">
                             <RouterLink to="/fav" class="dropdown-item">Mis favoritos</RouterLink>
                         </li>
-                        <li>
+                        <li data-bs-dismiss="offcanvas">
                             <RouterLink to="/terms" class="dropdown-item">Terminos y condiciones</RouterLink>
                         </li>
                     </ul>
@@ -65,13 +67,16 @@ header span {
 }
 
 header div {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 header img {
     width: 25px;
 }
 
+header img.loguito {
+    width: 70px;
+}
 .offcanvas {
     background-color: var(--color4);
 }

@@ -8,11 +8,11 @@
 }
 
 :root {
-  --color1: #213435;
-  --color2: #46685b;
-  --color3: #648a64;
-  --color4: #648a64;
-  --color5: #e1e3ac;
+  --color1: #526c41;
+  --color2: #4a7118;
+  --color3: #c9c77a;
+  --color4: #aba14a;
+  --color5: #e8e7c1;
 }
 
 
@@ -23,6 +23,14 @@ body {
 a {
   text-decoration: none;
   color: black;
+}
+
+.shadow {
+  box-shadow: 0 0 5px black;
+}
+
+.shadow-white {
+  box-shadow: 0 0 5px var(--color5);
 }
 
 main {
@@ -76,4 +84,12 @@ form .input-ctn {
   background-color: var(--color1);
   color: white;
   box-shadow: white 0 0 5px;
+}
+
+/*------------------------POST---------------------------*/
+
+.rate-post img,
+.autor img {
+  width: 30px;
+  padding-left: 5px;
 }
