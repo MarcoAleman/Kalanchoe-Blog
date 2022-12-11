@@ -1,4 +1,7 @@
 <script setup>
+const props = defineProps ({
+    post : {},
+})
 </script>
 
 <template>
@@ -16,7 +19,7 @@
             veritatis illo, laboriosam suscipit officia fugiat repudiandae ex odio soluta id reiciendis fugit dolorum
             ipsam.
         </p>
-        <div class="btm-post d-flex row m-0 mt-3">
+        <div class="btm-post d-flex row m-0 mt-3 mb-3">
             <div class="rate-post col-4 d-flex justify-content-evenly">
                 <img src="../assets/img/heart2.svg" alt="" srcset="">
                 <img src="../assets/img/comment.svg" alt="" srcset="">
@@ -26,8 +29,13 @@
                 <img src="../assets/img/user.svg" alt="" srcset="">
             </div>
         </div>
+        <form action="#" class="add-comment d-flex flex-column align-items-center justify-content-center gap-2">
+            <label for="add">Add comment</label>
+            <textarea name="add" id="add" class="p-1"></textarea>
+            <button class="btn btn-form">Publish</button>
+        </form>
     </section>
-    <section class="comments p-2">
+    <section class="comments p-2 mb-4">
         <div class="divisor">
             <div class="count-comments">3 comments</div>
         </div>

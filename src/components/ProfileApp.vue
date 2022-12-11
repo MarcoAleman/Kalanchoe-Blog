@@ -1,23 +1,16 @@
 <script setup>
+import user from '../stores/profile';
 </script>
 
 <template>
-    <!-- <div class="banner-profile d-flex justify-content-center align-items-center">
-        <div class="img-profile w-25">
-            <img src="../assets/img/user.svg" alt="" srcset="">
-        </div>
-        <div class="name-profile w-75">
-            <h1>Kalanchoe</h1>
-        </div>
-    </div> -->
     <form action="#" class="profile ctn mt-5 mb-3 p-2 text-center">
         <div class="img-profile">
-            <img src="../assets/img/user.svg" alt="" srcset="">
+            <img :src="user ? user.photoURL : '../src/assets/img/user.svg'" alt="">
         </div>
-        <h3>Kalanchoe</h3>
+        <h3>{{user ? user.displayName : 'Kalanchoe'}}</h3>
         <div class="input-ctn" data-validate="email is required">
             <label for="email">Email</label>
-            <input type="text" id="email" value="email@email.com" disabled>
+            <input type="text" id="email" :value="user ? user.email : 'email@email.com'" disabled>
         </div>
         <div class="input-ctn" data-validate="Name is required">
             <label for="name">Description</label>
@@ -35,15 +28,9 @@ form.ctn {
     z-index: 222;
     position: relative;
 }
-
-.banner-profile {
-    background-color: rgb(29, 112, 172);
-    height: 5rem;
-    width: 90%;
-    margin: 0 auto;
+.img-profile{
+    border-radius: 50%;
 }
-
-
 .img-profile img {
     margin: auto;
     width: 50%;

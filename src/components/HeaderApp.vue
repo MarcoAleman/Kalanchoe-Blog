@@ -1,5 +1,8 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { RouterLink } from 'vue-router';
+import { loginWithGoogle, logout } from '../firebase/auth';
+import user from '../stores/profile';
+
 </script>
 
 <template>
@@ -9,9 +12,10 @@ import { RouterLink } from 'vue-router'
         </a>
 
         <RouterLink to="/"><img class="loguito" src="../assets/img/loguito.png" alt="Kalanchoe Kingdom"/></RouterLink>
-        <RouterLink to="/login">
+        <RouterLink v-if="!user" to="/login">
             <img src="../assets/img/user.svg"/>
         </RouterLink>
+        <img v-if="user" src="../assets/img/logout.svg" alt="" @click="logout">
 
         <div class="offcanvas offcanvas-start text-center" tabindex="-1" id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel">

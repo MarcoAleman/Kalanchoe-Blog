@@ -1,7 +1,7 @@
 <script setup>
 import Banner from './BannerLandingApp.vue';
 import PostsCtn from './PostsCtnLanding.vue';
-import Footer from './FooterApp.vue';
+import Footer from './FooterLanding.vue';
 </script>
 
 <template>

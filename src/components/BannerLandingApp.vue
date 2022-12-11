@@ -1,5 +1,5 @@
 <template>
-    <div class="banner d-flex justify-content-center align-items-center">
+    <div class="banner d-flex justify-content-center align-items-center w-100">
         <span>Kalanchoes Kingdom</span>
     </div>
 </template>

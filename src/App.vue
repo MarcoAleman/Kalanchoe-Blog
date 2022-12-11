@@ -9,7 +9,7 @@ import Main from './components/LandingApp.vue';
 
 <template>
   <Header />
-  <main>
+  <main class="d-flex flex-column justify-content-center align-items-center">
     <RouterView />
   </main>
 </template>

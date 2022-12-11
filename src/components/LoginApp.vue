@@ -1,16 +1,17 @@
 <script setup>
+import { loginWithGoogle, logout } from '../firebase/auth';
 </script>
 
 <template>
-    <section class="ctn about text-center mt-5 mb-3 py-3">
+    <section class="ctn about text-center py-3">
         <form action="#">
             <h2>Login</h2>
             <div class="login-redes d-flex justify-content-evenly align-itmes-center my-4">
+                <div>
+                    <img src="../assets/img/google.svg" @click="loginWithGoogle" style="width: 35px;">
+                </div>
                 <a href="https://www.linkedin.com/in/aleman-marco/" target="_blank">
                     <img src="../assets/img/face-logo.svg" alt="" srcset="" style="width: 35px;">
-                </a>
-                <a href="https://www.linkedin.com/in/aleman-marco/" target="_blank">
-                    <img src="../assets/img/google.svg" alt="" srcset="" style="width: 35px;">
                 </a>
             </div>
             <span class="my-2">Or</span>
