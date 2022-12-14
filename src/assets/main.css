@@ -1,96 +1,110 @@
 @import url('https://fonts.googleapis.com/css?family=Titan+One');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Titan One', san-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titan One', san-serif;
 }
 
 :root {
-  --color1: #526c41;
-  --color2: #4a7118;
-  --color3: #c9c77a;
-  --color4: #aba14a;
-  --color5: #e8e7c1;
+    --color1: #526c41;
+    --color2: #4a7118;
+    --color3: #c9c77a;
+    --color4: #aba14a;
+    --color5: #e8e7c1;
 }
 
 
 body {
-  background-color: var(--color5);
+    background-color: var(--color5);
 }
 
 a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }
 
 .shadow {
-  box-shadow: 0 0 5px black;
+    box-shadow: 0 0 5px black;
 }
 
 .shadow-white {
-  box-shadow: 0 0 5px var(--color5);
+    box-shadow: 0 0 5px var(--color5);
 }
 
 main {
-  margin-top: 7vh;
-  min-height: 86vh;
+    margin-top: 7vh;
+    min-height: 86vh;
 }
 
 section.ctn,
 form.ctn {
-  margin: 0 auto;
-  border-radius: 10px;
-  background-color: var(--color3);
-  width: 90%;
-  border-radius: 10px 10px 0 0;
-  box-shadow: 0 0 5px black;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: var(--color3);
+    width: 90%;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 5px black;
 }
 
 /*------------------------FORMS---------------------------*/
 form .input-ctn {
-  width: 100%;
-  margin-bottom: 15px;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .input-ctn input,
 .input-ctn textarea {
-  text-align: center;
-  width: 90%;
-  height: 45px;
-  font-size: 15px;
-  color: #555;
-  background-color: var(--color5);
-  line-height: 1.2;
-  outline: none;
-  border: none;
-  border-radius: 10px 10px 0 0;
-  border-bottom: 2px solid gray;
+    text-align: center;
+    width: 90%;
+    height: 45px;
+    font-size: 15px;
+    color: #555;
+    background-color: var(--color5);
+    line-height: 1.2;
+    outline: none;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid gray;
 }
 
 .input-ctn textarea {
-  height: 90px;
-  padding-top: 15px;
+    height: 90px;
+    padding-top: 15px;
 }
 
 .btn-form {
-  width: 80%;
-  background-color: var(--color2);
-  color: white;
-  align-self: center;
+    width: 80%;
+    background-color: var(--color2);
+    color: white;
+    align-self: center;
 }
 
 .btn-form:hover {
-  background-color: var(--color1);
-  color: white;
-  box-shadow: white 0 0 5px;
+    background-color: var(--color1);
+    color: white;
+    box-shadow: white 0 0 5px;
 }
 
 /*------------------------POST---------------------------*/
 
 .rate-post img,
 .autor img {
-  width: 30px;
-  padding-left: 5px;
+    width: 30px;
+    padding-left: 5px;
+}
+
+@media screen and (orientation:landscape) {
+    main {
+        margin-top: 10vh;
+        min-height: 80vh;
+    }
+
+    section.ctn,
+    form.ctn {
+        margin: 2vh auto 15vh !important;
+        width: 80%;
+        padding: 1rem 2rem !important;
+    }
 }

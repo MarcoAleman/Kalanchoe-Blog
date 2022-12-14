@@ -54,8 +54,18 @@ footer {
     border-radius: 10px 10px 0 0;
 }
 
+footer h3 {
+    text-shadow: 2px 2px 7px black;
+    color: white;
+}
+
 footer a {
     color: white;
 }
 
+@media screen and (orientation:landscape) {
+    footer {
+        width: 100%;
+    }
+}
 </style>

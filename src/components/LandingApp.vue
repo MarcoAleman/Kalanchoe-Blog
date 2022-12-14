@@ -6,7 +6,7 @@ import Footer from './FooterLanding.vue';
 
 <template>
     <Banner />
-    <div class="p-1">
+    <div class="landing p-1">
         <PostsCtn />
 
         <div class="categories d-flex flex-column gap-3 my-4">
@@ -45,4 +45,10 @@ import Footer from './FooterLanding.vue';
 .about p {
     font-size: 1.3rem;
 }
+
+@media screen and (orientation:landscape) {
+    .landing {
+        width: 90%;
+    }
+    }
 </style>

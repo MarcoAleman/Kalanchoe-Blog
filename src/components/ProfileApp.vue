@@ -36,4 +36,10 @@ form.ctn {
     border-radius: 50%;
     width: 50%;
 }
+
+@media screen and (orientation:landscape) {
+    .img-profile img {
+        width: 30%;
+    }
+}
 </style>

@@ -35,4 +35,10 @@ import { RouterLink } from 'vue-router'
 .btn-1 img {
     margin-left: 2px;
 }
+
+@media screen and (orientation:landscape) {
+    .nav-bottom {
+        height: fit-content;
+    }
+}
 </style>

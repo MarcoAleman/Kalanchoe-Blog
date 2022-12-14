@@ -90,4 +90,10 @@ ul {
     list-style: none;
     padding: 0;
 }
+
+@media screen and (orientation:landscape) {
+    header {
+        height: 10vh;
+    }
+}
 </style>

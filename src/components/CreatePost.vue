@@ -39,8 +39,8 @@ const create = () => {
 <template>
     <form @submit.prevent="addNewPost" class="ctn contact mt-5 mb-3 p-2 py-3 d-flex flex-column text-center">
         <h2>Create a new Post!</h2>
-        <div class="input-ctn" data-validate="Title is required">
-            <label for="title">Title</label>
+        <div class="input-ctn d-flex flex-column align-items-center" data-validate="Title is required">
+            <label for="title">Title </label>
             <input v-model="title" type="text" id="title" placeholder="Your title">
         </div>
         <div class="input-ctn " data-validate="Name is required">
@@ -49,7 +49,7 @@ const create = () => {
         </div>
         <div class="input-ctn" data-validate="Name is required">
             <label for="name">Post body</label>
-            <textarea v-model="description" type="text" id="name" placeholder="Your pos description"></textarea>
+            <textarea v-model="description" type="text" id="name" placeholder="Your post description"></textarea>
         </div>
         <button class="btn btn-form">Create</button>
     </form>

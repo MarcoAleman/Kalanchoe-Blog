@@ -38,30 +38,9 @@ const addNewComment = () => {
 </template>
 
 <style scoped>
-/* form {
-    margin-top: 10px;
-    display: flex;
-    width: 100%;
-    height: 2rem;
+@media screen and (orientation:landscape) {
+    textarea {
+        width: 79%;
+    }
 }
-
-form input {
-    flex-grow: 1;
-    border: none;
-    border-bottom: 1px solid black;
-}
-
-form button {
-    background-color: pink;
-    color: white;
-    border: none;
-    margin-left: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.5s all;
-}
-
-form button:hover {
-    background-color: palevioletred;
-} */
 </style>
