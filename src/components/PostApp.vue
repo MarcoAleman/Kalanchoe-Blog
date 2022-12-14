@@ -1,7 +1,24 @@
 <script setup>
-const props = defineProps ({
+import { ref } from 'vue';
+import { addComment } from '../firebase/comments';
+/* const props = defineProps ({
     post : {},
-})
+}) */
+const name = ref('');
+const user = ref('');
+const message = ref('');
+
+const comments = ref([])
+
+const addNewComment = () => {
+    const newComment = {
+        id: crypto.randomUUID(),
+        idPost: crypto.randomUUID(),
+        name: user.name.value,
+        message: message.value,
+    }
+}
+
 </script>
 
 <template>
@@ -31,8 +48,8 @@ const props = defineProps ({
         </div>
         <form action="#" class="add-comment d-flex flex-column align-items-center justify-content-center gap-2">
             <label for="add">Add comment</label>
-            <textarea name="add" id="add" class="p-1"></textarea>
-            <button class="btn btn-form">Publish</button>
+            <textarea v-model='message' name="add" id="add" class="p-1"></textarea>
+            <button class="btn btn-form" @click.prevent="addNewComment">Publish</button>
         </form>
     </section>
     <section class="comments p-2 mb-4">

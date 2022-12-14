@@ -10,6 +10,7 @@ const loginWithGoogle = () => {
     .then((result) => {
         console.log('result', result);
         user.value = result.user;
+        //implementar localstorage en el futuro
     })
     .catch((error) => {
         console.warn('error', error);
