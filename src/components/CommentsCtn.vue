@@ -40,7 +40,7 @@ const updateComments = computed(() => {
         <p @click="verMasMenos" class="verMas">{{ textoP }}</p>
         <CommentItem v-if="verMas" v-for="comment in commentsWithId" :comment="comment" :key="comment.id" />
     </div> -->
-    <section class="comments p-2 mb-4 pb-5">
+    <section class="comments p-2 pb-5">
         <div class="divisor">
             <div class="count-comments">{{commentsWithId.length}} comments</div>
         </div>

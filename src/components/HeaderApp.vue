@@ -44,7 +44,7 @@ import user from '../stores/User';
                         <li data-bs-dismiss="offcanvas">
                             <RouterLink to="/work" class="dropdown-item">Work with Us</RouterLink>
                         </li>
-                        <li data-bs-dismiss="offcanvas">
+                        <li v-if="user" data-bs-dismiss="offcanvas">
                             <RouterLink to="/profile" class="dropdown-item">My Profile</RouterLink>
                         </li>
                         <li class="d-none" data-bs-dismiss="offcanvas">
