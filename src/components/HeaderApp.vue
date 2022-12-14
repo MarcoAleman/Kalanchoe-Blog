@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 import { loginWithGoogle, logout } from '../firebase/auth';
-import user from '../stores/profile';
+import user from '../stores/User';
 
 </script>
 

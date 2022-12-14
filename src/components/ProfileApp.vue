@@ -1,5 +1,5 @@
 <script setup>
-import user from '../stores/profile';
+import user from '../stores/User';
 </script>
 
 <template>

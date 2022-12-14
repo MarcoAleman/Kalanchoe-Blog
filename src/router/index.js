@@ -59,6 +59,11 @@ const router = createRouter({
       name: 'new',
       component: () => import('../views/AllPostsView.vue')
     },
+    {
+      path: '/create',
+      name: 'create',
+      component: () => import('../views/CreatePostView.vue')
+    },
     ]
 })
 

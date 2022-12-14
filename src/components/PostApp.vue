@@ -1,40 +1,24 @@
 <script setup>
 import { ref } from 'vue';
-import { addComment } from '../firebase/comments';
-/* const props = defineProps ({
+import user from '../stores/User'
+import NewComment from './NewComment.vue';
+import CommentsCtn from './CommentsCtn.vue';
+
+const props = defineProps ({
     post : {},
-}) */
-const name = ref('');
-const user = ref('');
-const message = ref('');
-
-const comments = ref([])
-
-const addNewComment = () => {
-    const newComment = {
-        id: crypto.randomUUID(),
-        idPost: crypto.randomUUID(),
-        name: user.name.value,
-        message: message.value,
-    }
-}
+    typeof: Object
+})
 
 </script>
 
 <template>
     <section class="post text-center py-3">
-        <h1>Title post</h1>
+        <h1>{{ post.name }}</h1>
         <div class="img-post p-2">
-            <img src="../assets/img/img1.jpg" alt="">
+            <img :src="post.photo ? post.photo : '../src/assets/img/img1.jpg'" alt="">
             <span class="d-none">Photo of kalanchoes</span>
         </div>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam numquam ullam ex at assumenda accusantium
-            atque vero tempora! Eveniet fugit recusandae officiis perspiciatis. Fugit, corrupti culpa. Velit illum
-            eligendi earum?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias distinctio sit ullam neque commodi nesciunt,
-            veritatis illo, laboriosam suscipit officia fugiat repudiandae ex odio soluta id reiciendis fugit dolorum
-            ipsam.
+        <p>{{post.body}}
         </p>
         <div class="btm-post d-flex row m-0 mt-3 mb-3">
             <div class="rate-post col-4 d-flex justify-content-evenly">
@@ -42,17 +26,13 @@ const addNewComment = () => {
                 <img src="../assets/img/comment.svg" alt="" srcset="">
             </div>
             <div class="autor col-8">
-                <span>Marco Antonio Aleman</span>
+                <span>{{ post.author }}</span>
                 <img src="../assets/img/user.svg" alt="" srcset="">
             </div>
         </div>
-        <form action="#" class="add-comment d-flex flex-column align-items-center justify-content-center gap-2">
-            <label for="add">Add comment</label>
-            <textarea v-model='message' name="add" id="add" class="p-1"></textarea>
-            <button class="btn btn-form" @click.prevent="addNewComment">Publish</button>
-        </form>
+        <NewComment v-if="user" :postId="post.id" />
     </section>
-    <section class="comments p-2 mb-4">
+    <!-- <section class="comments p-2 mb-4">
         <div class="divisor">
             <div class="count-comments">3 comments</div>
         </div>
@@ -67,7 +47,8 @@ const addNewComment = () => {
                 </p>
             </div>
         </div>
-    </section>
+    </section> -->
+    <CommentsCtn :postId="post.id" />
 </template>
 
 <style scoped>
@@ -76,7 +57,6 @@ const addNewComment = () => {
     background-color: var(--color3);
 }
 
-.img-post {}
 
 .img-post img {
     width: 90%;
@@ -88,16 +68,4 @@ const addNewComment = () => {
     text-align: start;
 }
 
-.comments {}
-
-.comments .divisor {
-    border-bottom: 3px solid black;
-    margin: 0 auto;
-    width: 90%;
-    font-size: 12px;
-}
-
-.comments .comment {
-    border-bottom: 1px solid gray;
-}
 </style>

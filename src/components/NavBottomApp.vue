@@ -8,7 +8,7 @@ import { RouterLink } from 'vue-router'
             <RouterLink to="/">
                 <img src="../assets/img/home.svg" alt="" srcset="" style="width: 25px;">
             </RouterLink>
-            <RouterLink to="/" class="btn-1">
+            <RouterLink to="/create" class="btn-1">
                 <img src="../assets/img/write.svg" alt="" srcset="" style="width: 30px;">
             </RouterLink>
             <RouterLink to="/profile">
