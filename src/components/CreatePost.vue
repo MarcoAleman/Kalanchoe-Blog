@@ -2,6 +2,7 @@
 import user from '../stores/User.js';
 import { addPost } from '../firebase/posts';
 import { ref } from 'vue';
+import Swal from 'sweetalert2'
 
 const description = ref('');
 const URLimg = ref('');
@@ -21,6 +22,17 @@ const addNewPost = () => {
     title.value = '';
     URLimg.value = '';
     description.value = '';
+    create()
+}
+
+const create = () => {
+    Swal.fire({
+        icon: 'success',
+        title: 'Post Created!',
+        showConfirmButton: false,
+        timer: 1500
+    })
+    //this.$router.push('post');
 }
 </script>
 

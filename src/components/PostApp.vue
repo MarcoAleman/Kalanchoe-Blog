@@ -55,6 +55,7 @@ const props = defineProps ({
 .post,
 .comments {
     background-color: var(--color3);
+    width: 100%;
 }
 
 

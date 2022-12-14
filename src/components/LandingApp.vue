@@ -8,20 +8,21 @@ import Footer from './FooterLanding.vue';
     <Banner />
     <div class="p-1">
         <PostsCtn />
-        <PostsCtn />
 
         <div class="categories d-flex flex-column gap-3 my-4">
-            <div class="category d-flex justify-content-center align-items-center">Variedades</div>
-            <div class="category d-flex justify-content-center align-items-center">Cuidados</div>
-            <div class="category d-flex justify-content-center align-items-center">Colecciones</div>
+            <div class="category d-flex justify-content-center align-items-center text-uppercase">varieties</div>
+            <div class="category d-flex justify-content-center align-items-center text-uppercase">collections</div>
+            <div class="category d-flex justify-content-center align-items-center text-uppercase">community</div>
         </div>
 
         <section class="ctn about my-3 p-2 text-center">
             <div class="profile img mb-2">
-                <img src="../assets/img/user.svg" alt="" srcset="">
+                <img class="rounded" src="../assets/img/slider-2.jpg" alt="kalanchoe image">
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugit dolorum quo eligendi minima
-                corrupti eaque suscipit eum et quae sed magnam neque unde consectetur quidem, sit quod dolor non?</p>
+            <p>All about the plants we love. The Kalanchoes.
+                Varieties, care, substrate, nutrients, etc.
+                A community to talk about the love of our plants.
+                Everything and much more in this blog.</p>
         </section>
 
     </div>
@@ -34,10 +35,14 @@ import Footer from './FooterLanding.vue';
     height: 3rem;
     background-color: var(--color2);
     border-radius: 12px;
+    font-size: 1.5rem;
 }
 
 .about img {
-    width: 30%;
+    width: 100%;
 }
 
+.about p {
+    font-size: 1.3rem;
+}
 </style>

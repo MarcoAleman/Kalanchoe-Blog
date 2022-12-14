@@ -1,16 +1,17 @@
 <script setup>
-import { loginWithGoogle, logout } from '../firebase/auth';
+import { RouterLink } from 'vue-router';
+import { loginWithGoogle } from '../firebase/auth';
 </script>
 
 <template>
     <section class="ctn about text-center py-3">
-        <form action="#">
+        <form @submit.prevent="">
             <h2>Login</h2>
             <div class="login-redes d-flex justify-content-evenly align-itmes-center my-4">
-                <div>
+                <RouterLink to="/post">
                     <img src="../assets/img/google.svg" @click="loginWithGoogle" style="width: 35px;">
-                </div>
-                <a href="https://www.linkedin.com/in/aleman-marco/" target="_blank">
+                </RouterLink>
+                <a href="#">
                     <img src="../assets/img/face-logo.svg" alt="" srcset="" style="width: 35px;">
                 </a>
             </div>
@@ -24,7 +25,7 @@ import { loginWithGoogle, logout } from '../firebase/auth';
                     <label for="name">Password</label>
                     <input type="password" id="name" placeholder="Your pass">
                 </div>
-                <button class="btn btn-form">Send</button>
+                <button class="btn btn-form">Login</button>
             </div>
         </form>
     </section>

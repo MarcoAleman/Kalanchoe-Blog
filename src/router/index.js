@@ -64,6 +64,11 @@ const router = createRouter({
       name: 'create',
       component: () => import('../views/CreatePostView.vue')
     },
+    {
+      path: '/rules',
+      name: 'rules',
+      component: () => import('../views/TermsView.vue')
+    },
     ]
 })
 

@@ -1,20 +1,57 @@
 <script setup>
+import user from '../stores/User.js';
+import { addPost } from '../firebase/posts';
+import { ref } from 'vue';
+import Swal from 'sweetalert2'
+
+const email = ref('');
+const linkedin = ref('');
+const message = ref('');
+
+/* const addNewPost = () => {
+    let newPost = {
+        id: crypto.randomUUID(),
+        date: Date.now(),
+        author: user.value.displayName,
+        photoAuthor: user.value.photoURL,
+        title: title.value,
+        photo: URLimg.value,
+        body: description.value,
+    }
+    addPost(newPost)
+    title.value = '';
+    URLimg.value = '';
+    description.value = '';
+    create()
+} */
+
+const send = () => {
+    Swal.fire({
+        icon: 'success',
+        title: 'Message sent!',
+        showConfirmButton: false,
+        timer: 1500
+    })
+    email.value = '';
+    linkedin.value = '';
+    message.value = '';
+}
 </script>
 
 <template>
-    <form action="#" class="ctn contact mt-5 mb-3 p-2 py-3 d-flex flex-column text-center">
+    <form @submit.prevent="send" class="ctn contact mt-5 mb-3 p-2 py-3 d-flex flex-column text-center">
         <h2>Work with Us!</h2>
         <div class="input-ctn" data-validate="email is required">
             <label for="email">Email</label>
-            <input type="text" id="email" placeholder="Your email">
+            <input v-model="email" type="text" id="email" placeholder="Your email">
         </div>
         <div class="input-ctn " data-validate="Name is required">
             <label for="name">Linkedin</label>
-            <input type="text" id="name" placeholder="Your profile">
+            <input v-model="linkedin" type="text" id="name" placeholder="Your profile">
         </div>
         <div class="input-ctn" data-validate="Name is required">
             <label for="name">Your Message</label>
-            <textarea type="text" id="name" placeholder="Your message"></textarea>
+            <textarea v-model="message" type="text" id="name" placeholder="Your message"></textarea>
         </div>
         <button class="btn btn-form">Send</button>
     </form>

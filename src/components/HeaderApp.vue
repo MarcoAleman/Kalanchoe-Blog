@@ -30,9 +30,9 @@ import user from '../stores/User';
                             <RouterLink to="/" class="dropdown-item text-center">Home</RouterLink>
                         </li>
                         <li data-bs-dismiss="offcanvas">
-                            <RouterLink to="/new" class="dropdown-item">New Posts</RouterLink>
+                            <RouterLink to="/post" class="dropdown-item">New Posts</RouterLink>
                         </li>
-                        <li data-bs-dismiss="offcanvas">
+                        <li class="d-none" data-bs-dismiss="offcanvas">
                             <RouterLink to="/post" class="dropdown-item">Posts Populares</RouterLink>
                         </li>
                         <li data-bs-dismiss="offcanvas">
@@ -45,13 +45,13 @@ import user from '../stores/User';
                             <RouterLink to="/work" class="dropdown-item">Work with Us</RouterLink>
                         </li>
                         <li data-bs-dismiss="offcanvas">
-                            <RouterLink to="/profile" class="dropdown-item">Mi perfil</RouterLink>
+                            <RouterLink to="/profile" class="dropdown-item">My Profile</RouterLink>
                         </li>
                         <li class="d-none" data-bs-dismiss="offcanvas">
                             <RouterLink to="/fav" class="dropdown-item">Mis favoritos</RouterLink>
                         </li>
                         <li data-bs-dismiss="offcanvas">
-                            <RouterLink to="/terms" class="dropdown-item">Terminos y condiciones</RouterLink>
+                            <RouterLink to="/rules" class="dropdown-item">Rules</RouterLink>
                         </li>
                     </ul>
                 </div>
